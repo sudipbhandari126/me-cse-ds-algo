@@ -2,9 +2,9 @@ public class MergeSort {
 
   public static void main(String[] args) {
     int[] arr = {2, 5, 9, 1};
-    printArray(arr);
+    Common.printArray(arr);
     mergeSort(arr, arr.length);
-    printArray(arr);
+    Common.printArray(arr);
   }
 
   private static void mergeSort(int[] a, int n) {
@@ -30,9 +30,9 @@ public class MergeSort {
 
   private static void merge(
       int[] a, int[] l, int[] r, int left, int right) {
-    printArray(a);
-    printArray(l);
-    printArray(r);
+    Common.printArray(a);
+    Common.printArray(l);
+    Common.printArray(r);
     int i = 0, j = 0, k = 0;
     while (i < left && j < right) {
       if (l[i] <= r[j]) {
@@ -49,12 +49,6 @@ public class MergeSort {
     }
   }
 
-  private static void  printArray(int[] arr){
-    for (int i : arr) {
-      System.out.print(i);
-    }
-    System.out.println();
-  }
 }
 
 
